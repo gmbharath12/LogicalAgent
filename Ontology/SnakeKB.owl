@@ -1,0 +1,229 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY Ontology "http://www.semanticweb.org/ontologies/2014/10/Ontology.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/2014/10/Ontology.owl#"
+     xml:base="http://www.semanticweb.org/ontologies/2014/10/Ontology.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:Ontology="http://www.semanticweb.org/ontologies/2014/10/Ontology.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about=""/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/Ontology.owl#liquidColor -->
+
+    <owl:DatatypeProperty rdf:about="#liquidColor">
+        <rdfs:domain rdf:resource="#Liquid"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/Ontology.owl#liquidName -->
+
+    <owl:DatatypeProperty rdf:about="#liquidName">
+        <rdfs:domain rdf:resource="#Liquid"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/Ontology.owl#solidColor -->
+
+    <owl:DatatypeProperty rdf:about="#solidColor">
+        <rdfs:domain rdf:resource="#Solid"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/Ontology.owl#solidName -->
+
+    <owl:DatatypeProperty rdf:about="#solidName">
+        <rdfs:domain rdf:resource="#Solid"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/Ontology.owl#Food -->
+
+    <owl:Class rdf:about="#Food"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/Ontology.owl#Liquid -->
+
+    <owl:Class rdf:about="#Liquid">
+        <rdfs:subClassOf rdf:resource="#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/Ontology.owl#Solid -->
+
+    <owl:Class rdf:about="#Solid">
+        <rdfs:subClassOf rdf:resource="#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/Ontology.owl#Apple -->
+
+    <Solid rdf:about="#Apple">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <solidName rdf:datatype="&xsd;string">Apple</solidName>
+        <solidColor rdf:datatype="&xsd;string">Red</solidColor>
+    </Solid>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/Ontology.owl#Banana -->
+
+    <Solid rdf:about="#Banana">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <solidName rdf:datatype="&xsd;string">Banana</solidName>
+        <solidColor rdf:datatype="&xsd;string">Yellow</solidColor>
+    </Solid>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/Ontology.owl#Chapathi -->
+
+    <owl:Thing rdf:about="#Chapathi">
+        <rdf:type rdf:resource="#Solid"/>
+        <solidName rdf:datatype="&xsd;string">Chapathis</solidName>
+        <solidColor rdf:datatype="&xsd;string">Yellow</solidColor>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/Ontology.owl#Coke -->
+
+    <Liquid rdf:about="#Coke">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <liquidColor rdf:datatype="&xsd;string">Brown</liquidColor>
+        <liquidName rdf:datatype="&xsd;string">Coke</liquidName>
+    </Liquid>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/Ontology.owl#Dew -->
+
+    <Liquid rdf:about="#Dew">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <liquidName rdf:datatype="&xsd;string">Dew</liquidName>
+        <liquidColor rdf:datatype="&xsd;string">White</liquidColor>
+    </Liquid>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/Ontology.owl#Mango -->
+
+    <owl:Thing rdf:about="#Mango">
+        <rdf:type rdf:resource="#Solid"/>
+        <solidName rdf:datatype="&xsd;string">Mango</solidName>
+        <solidColor rdf:datatype="&xsd;string">Yellow</solidColor>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/Ontology.owl#Orange -->
+
+    <Solid rdf:about="#Orange">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <solidName rdf:datatype="&xsd;string">Orange</solidName>
+        <solidColor rdf:datatype="&xsd;string">Yellow</solidColor>
+    </Solid>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/Ontology.owl#Rice -->
+
+    <Solid rdf:about="#Rice">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <solidName rdf:datatype="&xsd;string">Rice</solidName>
+        <solidColor rdf:datatype="&xsd;string">White</solidColor>
+    </Solid>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/Ontology.owl#Sprite -->
+
+    <Liquid rdf:about="#Sprite">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <liquidName rdf:datatype="&xsd;string">Sprite</liquidName>
+        <liquidColor rdf:datatype="&xsd;string">White</liquidColor>
+    </Liquid>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/Ontology.owl#ThumbsUp -->
+
+    <owl:Thing rdf:about="#ThumbsUp">
+        <rdf:type rdf:resource="#Liquid"/>
+        <liquidColor rdf:datatype="&xsd;string">Brown</liquidColor>
+        <liquidName rdf:datatype="&xsd;string">ThumbsUp</liquidName>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/Ontology.owl#Water -->
+
+    <owl:Thing rdf:about="#Water">
+        <rdf:type rdf:resource="#Liquid"/>
+        <liquidColor rdf:datatype="&xsd;string">Transparent</liquidColor>
+        <liquidName rdf:datatype="&xsd;string">Water</liquidName>
+    </owl:Thing>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

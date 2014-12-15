@@ -1,0 +1,52 @@
+<html>
+<head><title>AI Snake Game</title>
+<script src="jquery.js"></script>
+<script src="snake.js"></script>
+<script>
+	var _gaq=[['_setAccount','UA-27120534-1'],['_trackPageview'],['_trackPageLoadTime']];
+	(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+	g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+	s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+<script>
+  $.get("http://localhost:8080/Bharath/rest/hello",function(data,status)
+  {
+    // alert("Data: " + data + "\nStatus: " + status);
+  });
+
+</script>
+
+</head>
+<body onload="init();">
+&nbsp;&nbsp;
+<input type="button" value="Start" onclick="start();">&nbsp;&nbsp;
+<input type="button" value="Stop" onclick="stop();">&nbsp;&nbsp;
+<select id="search" onchange="change_search();">
+ </br>
+ <option>A* - H1</option>
+<option>A* - H2</option>
+<option>A* - (H1+H2)/2</option>
+</select>
+
+<br>
+<canvas id="canvas" width="350" height="350"></canvas>
+
+<div id="stats" style="float:right;width:300px;">
+Food Eaten: <span id="food_val"></span><br>
+Moves: <span id="moves_val"></span><br>
+Average Moves: <span id="avg_moves_val"></span><br>
+Average Nodes Processed: <span id="avg_nodes_val"></span><br>
+</div>
+
+
+<h2>How it works</h2>
+<p>This application uses web workers to offload the processing, which allows the browser UI to remain responsive even though CPU intensive operations may be taking place. The results are drawn on the screen using a canvas element.</p>
+
+<h2>Inferences</h2>
+ -->A* Search - Results in low average moves, with low number of processed nodes (low number of moves at low CPU cost, very good)
+</p>
+
+ <p> A* search allows us to know what direction the food is closest to, so we search in that direction instead of randmonly wandering around the board. Sort of like if the snake had a sense of smell.</p>
+
+</body>
+</html>

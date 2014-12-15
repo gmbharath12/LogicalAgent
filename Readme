@@ -1,0 +1,16 @@
+
+Requirements: Mac OS X, Firefox browser, Gradle tool with Jetty server. 
+ 
+Please read “AI project report” to understand the overall understanding of the system. 
+
+Please also install Gradle (a build automation tool) to run the web service. 
+
+“Ontology” contains (Knowledge Base)KB.
+ 
+“Bharath” contains WAR files. Please run Gradle by navigating to “Bharath” folder. 
+
+“Snake Knowledge Base” folder contains all WAR files.
+
+“Snake Game” contains all HTML, JavaScript and CSS files. Open the folder and execute index.html in Firefox. 
+
+ 
